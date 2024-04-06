@@ -1,0 +1,7 @@
+body {
+  --uno: m-0 bg-white text-green-9 font-sans tracking-normal;
+}
+
+div {
+  --uno: flex flex-col;
+}
