@@ -50,7 +50,7 @@ jobs:
       #   run: pnpm run lint
 
       - name: Build
-        run: pnpm run build --base /newport-farmers-market/
+        run: pnpm run build
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
