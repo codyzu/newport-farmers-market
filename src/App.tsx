@@ -11,10 +11,11 @@ import Market from './Market';
 import rooster from './assets/rooster.svg';
 import rainyDay from './assets/rainy-day.jpg';
 import Hours from './Hours';
+import seedling from './assets/seedling.svg';
 
 function App() {
   return (
-    <div className="h-100dvh w-100dvw">
+    <div className="h-100dvh w-100dvw relative overflow-hidden">
       <Parallax pages={13}>
         <ParallaxLayer offset={0} speed={0} className="items-center">
           <div className="w-full max-w-screen-lg px-4 pt-4">
@@ -138,6 +139,9 @@ function App() {
           <div className="section-header">See you next Saturday!</div>
         </ParallaxLayer>
       </Parallax>
+      <div className="absolute bottom-0 w-full items-end">
+        <img src={seedling} className="w-20dvw max-w-120px mr-4dvw" />
+      </div>
     </div>
   );
 }
