@@ -1,11 +1,11 @@
 export default function Market() {
   return (
     <>
-      <div className="text-xl">
+      <div className="text-xl font-semibold text-justify">
         The Newport Farmer&apos;s Market has been an important anchor in our
         vibrant coastal community since 1978!
       </div>
-      <div>
+      <div className="text-justify">
         Come visit us on Saturdays throughout the year-long growing season and
         you will see we have something for everyone. Rain or Shine! Our farmers
         offer diverse, high-quality, seasonal & locally grown produce, meat,

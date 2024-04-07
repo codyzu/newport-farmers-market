@@ -3,7 +3,7 @@ export default function About() {
     <>
       <div className="section-header">About</div>
       <div className="font-semibold">It All Starts With a Seed</div>
-      <div>
+      <div className="text-justify">
         A stalk of corn waiting for harvest started as a seed; our
         community&apos;s the same. We&apos;re planting the seed of brighter
         tomorrows today. The Newport Farmers&apos; Market gives local vendors
@@ -12,7 +12,7 @@ export default function About() {
         grow!
       </div>
       <div className="font-semibold">History</div>
-      <div>
+      <div className="text-justify">
         In 1978 the Farmer-to-Consumer Direct Marketing Act directed the
         Cooperative Extension Service to become involved in farm-direct
         marketing by helping to organize local farmers markets. Newport Farmers
