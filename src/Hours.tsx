@@ -1,11 +1,9 @@
 export default function Hours() {
   return (
-    <>
-      <div className="section-header">Hours</div>
-      <div>Spring, Summer, Fall (March - December)</div>
-      <div>Every Saturday, 9am - 1pm</div>
-      <div>Winter (January - February)</div>
-      <div>Closed</div>
-    </>
+    <div className="section-header items-center gap-2">
+      <div>Rain or Shine</div>
+      <div>Every Saturday from April to December</div>
+      <div>9am - 1pm</div>
+    </div>
   );
 }
