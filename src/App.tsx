@@ -12,10 +12,11 @@ import rooster from './assets/rooster.svg';
 import rainyDay from './assets/rainy-day.jpg';
 import Hours from './Hours';
 import seedling from './assets/seedling.svg';
+import tomato from './assets/tomato.svg';
 
 function App() {
   return (
-    <div className="h-100dvh w-100dvw relative overflow-hidden">
+    <div className="h-100dvh w-100dvw relative">
       <Parallax pages={13}>
         <ParallaxLayer offset={0} speed={0} className="items-center">
           <div className="w-full max-w-screen-lg px-4 pt-4">
@@ -107,13 +108,25 @@ function App() {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
+          // Offset={6}
+          // speed={-0.5}
+          // factor={3}
+          sticky={{start: 8, end: 11}}
+          className="items-start justify-center"
+        >
+          {/* <div>Hello</div> */}
+          <img src={tomato} className="w-40 aspect-square ml-10" />
+        </ParallaxLayer>
+        <ParallaxLayer
           offset={9}
+          speed={0.8}
           className="justify-center items-center gap-2 p-4"
         >
           <Location />
         </ParallaxLayer>
         <ParallaxLayer
           offset={10}
+          speed={0.2}
           className="justify-center items-center gap-2 p-4"
         >
           <Contact />
@@ -140,7 +153,10 @@ function App() {
         </ParallaxLayer>
       </Parallax>
       <div className="absolute bottom-0 w-full items-end">
-        <img src={seedling} className="w-20dvw max-w-120px mr-4dvw" />
+        <img
+          src={seedling}
+          className="w-20dvw max-w-120px mr-4dvw animate-wobble"
+        />
       </div>
     </div>
   );
