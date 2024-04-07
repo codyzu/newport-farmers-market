@@ -57,7 +57,7 @@ export default defineConfig({
         mono: ['Inconsolata'],
         sans: [
           {
-            name: 'Mulish',
+            name: 'Noto Sans',
             weights: ['400', '500', '700'],
             italic: true,
           },
@@ -71,6 +71,7 @@ export default defineConfig({
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
   shortcuts: {
+    'section-header': 'text-xl font-bold',
     // 'border-primary': 'rounded-md border-2 border-teal',
     // 'shadow-primary': 'shadow-xl shadow-teal-800',
     // 'border-focus': 'rounded-md border-2 border-violet-700',
