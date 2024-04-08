@@ -73,6 +73,9 @@ export default defineConfig({
   transformers: [transformerDirectives(), transformerVariantGroup()],
   shortcuts: {
     'section-header': 'text-3xl font-bold text-center',
+    'text-section':
+      'max-w-screen-md gap-2 mx-4 p-4 relative bg-white bg-opacity-60',
+    'image-thumb': 'rounded-lg object-cover w-full aspect-square',
     // 'border-primary': 'rounded-md border-2 border-teal',
     // 'shadow-primary': 'shadow-xl shadow-teal-800',
     // 'border-focus': 'rounded-md border-2 border-violet-700',

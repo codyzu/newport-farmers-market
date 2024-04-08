@@ -59,34 +59,33 @@ function App() {
         >
           <img src={tomato} className="w-40 aspect-square ml--15 relative" />
         </ParallaxLayer>
-        <ParallaxLayer offset={5} className="justify-center items-center gap-4">
+        <ParallaxLayer
+          offset={5}
+          speed={-2}
+          className="justify-center items-center gap-4"
+        >
           <div className="grid w-full max-w-screen-lg grid-cols-2 p-4 gap-8">
-            <img
-              className="rounded-lg shadow-md shadow-black object-cover w-full aspect-square"
-              src={strawberries}
-            />
+            <img className="image-thumb" src={strawberries} />
           </div>
           <div className="text-3xl font-bold text-center h-2.25rem" />
         </ParallaxLayer>
         <ParallaxLayer offset={5} className="justify-center items-center gap-4">
           <div className="grid w-full max-w-screen-lg grid-cols-2 p-4 gap-8">
-            <img
-              className="rounded-lg shadow-md shadow-black object-cover w-full aspect-square col-start-2"
-              src={vegetables1}
-            />
+            <img className="image-thumb col-start-2" src={vegetables1} />
           </div>
           <div className="text-3xl font-bold text-center h-2.25rem" />
         </ParallaxLayer>
         <ParallaxLayer offset={7} className="justify-center items-center gap-4">
           <div className="grid w-full max-w-screen-lg grid-cols-2 p-4 gap-8">
-            <img
-              className="rounded-lg shadow-md shadow-black object-cover w-full aspect-square col-start-2"
-              src={flowers}
-            />
+            <img className="image-thumb col-start-2" src={flowers} />
           </div>
           <div className="text-3xl font-bold text-center h-2.25rem" />
         </ParallaxLayer>
-        <ParallaxLayer offset={7} className="justify-center items-center gap-4">
+        <ParallaxLayer
+          offset={7}
+          speed={-2}
+          className="justify-center items-center gap-4"
+        >
           <div className="grid w-full max-w-screen-lg grid-cols-2 p-4 gap-8">
             <img
               className="rounded-lg shadow-md shadow-black object-cover w-full aspect-square"
@@ -100,25 +99,25 @@ function App() {
           className="justify-center items-center gap-4 p-2 z-1"
         >
           <div className="w-60dvw aspect-square max-w-60dvh" />
-          <div className="max-w-screen text-3xl font-bold text-center mx-4 px-4 py-4 self-stretch bg-white bg-opacity-60">
+          <div className="text-3xl font-bold text-center text-section">
             Local farmers, craftsmen, artisans, & vendors
           </div>
         </ParallaxLayer>
         <ParallaxLayer
           offset={9}
-          speed={0.8}
+          // Speed={0.8}
           className="justify-center items-center gap-2 p-2 z-1"
         >
-          <div className="max-w-screen-md gap-2 mx-4 p-4 relative bg-white bg-opacity-60">
+          <div className="text-section">
             <Location />
           </div>
         </ParallaxLayer>
         <ParallaxLayer
           offset={10}
-          speed={0.2}
+          // Speed={0.2}
           className="justify-center items-center gap-2 p-2 z-1"
         >
-          <div className="max-w-screen-md gap-2 mx-4 p-4 relative bg-white bg-opacity-60">
+          <div className="text-section">
             <Contact />
           </div>
         </ParallaxLayer>
@@ -126,7 +125,7 @@ function App() {
           offset={11}
           className="justify-center items-center gap-2 p-2 z-1"
         >
-          <div className="max-w-screen-md gap-2 mx-4 p-4 relative bg-white bg-opacity-60">
+          <div className="text-section">
             <About />
           </div>
         </ParallaxLayer>
@@ -135,12 +134,9 @@ function App() {
           className="justify-center items-center p-4 gap-4"
         >
           <div className="w-65dvw aspect-square max-w-65dvh">
-            <img
-              className="rounded-lg shadow-md shadow-black object-cover w-full h-full"
-              src={rainyDay}
-            />
+            <img className="image-thumb" src={rainyDay} />
           </div>
-          <div className="section-header">See you next Saturday!</div>
+          <div className="section-header">See you Saturday!</div>
         </ParallaxLayer>
       </Parallax>
       <div className="absolute bottom-0 w-full items-end">
