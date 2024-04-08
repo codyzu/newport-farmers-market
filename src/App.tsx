@@ -140,10 +140,12 @@ function App() {
         </ParallaxLayer>
       </Parallax>
       <div className="absolute bottom-0 w-full items-end pointer-events-none">
-        <img
-          src={seedling}
-          className="w-20dvw max-w-120px mr-4dvw animate-slide-in-up"
-        />
+        <div className="animate-slide-in-up">
+          <img
+            src={seedling}
+            className="w-20dvw max-w-120px mr-4dvw animate-wobbles"
+          />
+        </div>
       </div>
     </div>
   );

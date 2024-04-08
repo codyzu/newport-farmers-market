@@ -91,47 +91,75 @@ export default defineConfig({
   },
   // https://github.com/unocss/unocss/discussions/2012
   theme: {
-    // Animation: {
-    //   keyframes: {
-    //     longbounce: `{
-    //         0%, 100% { transform: translateY(+100%) }
-    //         50% { transform: translateY(0) }
-    //       }`,
-    //     emoji: `{
-    //       from,to {
-    //         transform: translate3d(0,0,0);
-    //       }
-    //       0% {
-    //         bottom: -100px;
-    //         opacity: 1;
-    //       }
-    //       10%,30%,50%,70%,90% {
-    //         transform: translate3d(calc(var(--reaction-bounce-distance) * -1),0,0);
-    //       }
-    //       20%,40%,60%,80% {
-    //         transform: translate3d(var(--reaction-bounce-distance),0,0);
-    //       }
-    //       60% {
-    //         opacity: 1;
-    //       }
-    //       100% {
-    //         bottom: 90vh;
-    //         opacity: 0;
-    //       }
-    //     }`,
-    //   },
-    //   durations: {
-    //     longbounce: '120s',
-    //     emoji: 'var(--reaction-duration)',
-    //   },
-    //   timingFns: {
-    //     longbounce: 'ease-in-out',
-    //     emoji: 'ease-out',
-    //   },
-    //   counts: {
-    //     longbounce: 'infinite',
-    //   },
-    //   // Wiggle: 'wiggle 1s ease-in-out infinite',
-    // },
+    animation: {
+      keyframes: {
+        wobbles: `{
+          from {
+            transform:translate3d(0,0,0)
+          }
+          3% {
+            transform:translate3d(-25%,0,0) rotate3d(0,0,1,-5deg)
+          }
+          6% {
+            transform:translate3d(20%,0,0) rotate3d(0,0,1,3deg)
+          }
+          9% {
+            transform:translate3d(-15%,0,0) rotate3d(0,0,1,-3deg)
+          }
+          12% {
+            transform:translate3d(10%,0,0) rotate3d(0,0,1,2deg)
+          }
+          15% {
+            transform:translate3d(-5%,0,0) rotate3d(0,0,1,-1deg)
+          }
+          18% {
+            transform:translate3d(0,0,0)
+          }
+          to {
+            transform:translate3d(0,0,0)
+          }
+        }`,
+        //   Longbounce: `{
+        //       0%, 100% { transform: translateY(+100%) }
+        //       50% { transform: translateY(0) }
+        //     }`,
+        //   emoji: `{
+        //     from,to {
+        //       transform: translate3d(0,0,0);
+        //     }
+        //     0% {
+        //       bottom: -100px;
+        //       opacity: 1;
+        //     }
+        //     10%,30%,50%,70%,90% {
+        //       transform: translate3d(calc(var(--reaction-bounce-distance) * -1),0,0);
+        //     }
+        //     20%,40%,60%,80% {
+        //       transform: translate3d(var(--reaction-bounce-distance),0,0);
+        //     }
+        //     60% {
+        //       opacity: 1;
+        //     }
+        //     100% {
+        //       bottom: 90vh;
+        //       opacity: 0;
+        //     }
+        //   }`,
+      },
+      durations: {
+        wobbles: '5000ms',
+        //   Longbounce: '120s',
+        //   emoji: 'var(--reaction-duration)',
+      },
+      // TimingFns: {
+      //   longbounce: 'ease-in-out',
+      //   emoji: 'ease-out',
+      // },
+      counts: {
+        // Longbounce: 'infinite',
+        wobbles: 'infinite',
+      },
+      // Wiggle: 'wiggle 1s ease-in-out infinite',
+    },
   },
 });
