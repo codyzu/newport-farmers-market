@@ -2,8 +2,10 @@ export default function Location() {
   return (
     <>
       <div className="section-header">Location</div>
-      <div>Hwy 101 and Angle Street</div>
-      <div>Newport, Oregon</div>
+      <div className="self-center">
+        <div className="">Hwy 101 and Angle Street</div>
+        <div className="">Newport, Oregon</div>
+      </div>
       <div className="max-w-full">
         <iframe
           className="w-400px max-w-full h-300px"

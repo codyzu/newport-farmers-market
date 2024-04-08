@@ -136,7 +136,7 @@ function App() {
           <div className="w-65dvw aspect-square max-w-65dvh">
             <img className="image-thumb" src={rainyDay} />
           </div>
-          <div className="section-header">See you Saturday!</div>
+          <div className="section-header">See you Saturday at the market!</div>
         </ParallaxLayer>
       </Parallax>
       <div className="absolute bottom-0 w-full items-end pointer-events-none">
