@@ -139,7 +139,7 @@ function App() {
           <div className="section-header">See you Saturday!</div>
         </ParallaxLayer>
       </Parallax>
-      <div className="absolute bottom-0 w-full items-end">
+      <div className="absolute bottom-0 w-full items-end pointer-events-none">
         <img
           src={seedling}
           className="w-20dvw max-w-120px mr-4dvw animate-slide-in-up"
