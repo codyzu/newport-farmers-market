@@ -16,7 +16,7 @@ import tomato from './assets/tomato.svg';
 
 function App() {
   return (
-    <div className="h-100dvh w-100dvw relative">
+    <div className="h-100dvh w-100dvw relative overflow-hidden">
       <Parallax pages={13}>
         <ParallaxLayer offset={0} speed={0} className="items-center">
           <div className="w-full max-w-screen-lg px-4 pt-4">
@@ -53,46 +53,43 @@ function App() {
           <div className="h-32dvh w-32dvh i-uil-cloud-sun-rain animate-bounce" />
           <Hours />
         </ParallaxLayer>
+        <ParallaxLayer
+          sticky={{start: 8, end: 11}}
+          className="items-start justify-center z--1"
+        >
+          <img src={tomato} className="w-40 aspect-square ml--15 relative" />
+        </ParallaxLayer>
         <ParallaxLayer offset={5} className="justify-center items-center gap-4">
-          <div className="w-50dvw aspect-square max-w-50dvh">
+          <div className="grid w-full max-w-screen-lg grid-cols-2 p-4 gap-8">
             <img
-              className="rounded-lg shadow-md shadow-black object-cover w-full h-full"
+              className="rounded-lg shadow-md shadow-black object-cover w-full aspect-square"
               src={strawberries}
             />
           </div>
           <div className="text-3xl font-bold text-center h-2.25rem" />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={5.75}
-          className="justify-center items-center gap-4"
-        >
-          <div className="w-50dvw aspect-square max-w-50dvh">
+        <ParallaxLayer offset={5} className="justify-center items-center gap-4">
+          <div className="grid w-full max-w-screen-lg grid-cols-2 p-4 gap-8">
             <img
-              className="rounded-lg shadow-md shadow-black object-cover w-full h-full"
+              className="rounded-lg shadow-md shadow-black object-cover w-full aspect-square col-start-2"
               src={vegetables1}
             />
           </div>
           <div className="text-3xl font-bold text-center h-2.25rem" />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={6.5}
-          className="justify-center items-center gap-4"
-        >
-          <div className="w-50dvw aspect-square max-w-50dvh">
+        <ParallaxLayer offset={7} className="justify-center items-center gap-4">
+          <div className="grid w-full max-w-screen-lg grid-cols-2 p-4 gap-8">
             <img
-              className="rounded-lg shadow-md shadow-black object-cover w-full h-full"
+              className="rounded-lg shadow-md shadow-black object-cover w-full aspect-square col-start-2"
               src={flowers}
             />
           </div>
           <div className="text-3xl font-bold text-center h-2.25rem" />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={7.25}
-          className="justify-center items-center gap-4"
-        >
-          <div className="w-50dvw aspect-square max-w-50dvh">
+        <ParallaxLayer offset={7} className="justify-center items-center gap-4">
+          <div className="grid w-full max-w-screen-lg grid-cols-2 p-4 gap-8">
             <img
-              className="rounded-lg shadow-md shadow-black object-cover w-full h-full"
+              className="rounded-lg shadow-md shadow-black object-cover w-full aspect-square"
               src={vegetables2}
             />
           </div>
@@ -100,42 +97,36 @@ function App() {
         </ParallaxLayer>
         <ParallaxLayer
           sticky={{start: 4, end: 8}}
-          className="justify-center items-center gap-4"
+          className="justify-center items-center gap-4 p-2 z-1"
         >
           <div className="w-60dvw aspect-square max-w-60dvh" />
-          <div className="text-3xl font-bold text-center px-2 py-4 self-stretch bg-white bg-opacity-80">
+          <div className="max-w-screen text-3xl font-bold text-center mx-4 px-4 py-4 self-stretch bg-white bg-opacity-60">
             Local farmers, craftsmen, artisans, & vendors
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          // Offset={6}
-          // speed={-0.5}
-          // factor={3}
-          sticky={{start: 8, end: 11}}
-          className="items-start justify-center"
-        >
-          {/* <div>Hello</div> */}
-          <img src={tomato} className="w-40 aspect-square ml-10" />
-        </ParallaxLayer>
-        <ParallaxLayer
           offset={9}
           speed={0.8}
-          className="justify-center items-center gap-2 p-4"
+          className="justify-center items-center gap-2 p-2 z-1"
         >
-          <Location />
+          <div className="max-w-screen-md gap-2 mx-4 p-4 relative bg-white bg-opacity-60">
+            <Location />
+          </div>
         </ParallaxLayer>
         <ParallaxLayer
           offset={10}
           speed={0.2}
-          className="justify-center items-center gap-2 p-4"
+          className="justify-center items-center gap-2 p-2 z-1"
         >
-          <Contact />
+          <div className="max-w-screen-md gap-2 mx-4 p-4 relative bg-white bg-opacity-60">
+            <Contact />
+          </div>
         </ParallaxLayer>
         <ParallaxLayer
           offset={11}
-          className="justify-center items-center gap-2 p-4"
+          className="justify-center items-center gap-2 p-2 z-1"
         >
-          <div className="max-w-screen-md gap-2 mx-4">
+          <div className="max-w-screen-md gap-2 mx-4 p-4 relative bg-white bg-opacity-60">
             <About />
           </div>
         </ParallaxLayer>
@@ -155,7 +146,7 @@ function App() {
       <div className="absolute bottom-0 w-full items-end">
         <img
           src={seedling}
-          className="w-20dvw max-w-120px mr-4dvw animate-wobble"
+          className="w-20dvw max-w-120px mr-4dvw animate-slide-in-up"
         />
       </div>
     </div>
