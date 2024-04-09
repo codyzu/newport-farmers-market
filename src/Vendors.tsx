@@ -89,7 +89,7 @@ export default function Vendors() {
           </div>
         ))}
       </div>
-      <div className="items-center gap-2 justify-center flex-wrap flex-row text-lg">
+      <div className="items-center gap-4 justify-center flex-wrap flex-row text-lg">
         <a
           className="flex flex-row items-center"
           href="https://docs.google.com/forms/d/e/1FAIpQLScW2b5tIJq5WzAjHLjk9cTlqT93gJx-y7-sl89hDb4YbHQaFw/viewform?usp=sf_link"
@@ -101,8 +101,8 @@ export default function Vendors() {
           className="flex flex-row"
           href="https://drive.google.com/drive/folders/1foZn0lQcxg2cO0QywMBbYyIXPIzxjzak?usp=sharing"
         >
-          <div className="i-uil-google-drive h-2rem w-2rem" />
-          <div className="underline">Vendor Resources</div>
+          <div className="i-uil-folder-info h-2rem w-2rem" />
+          <div className="underline">Vendor & Entertainment Resources</div>
         </a>
       </div>
     </div>
