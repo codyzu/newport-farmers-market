@@ -140,10 +140,29 @@ function App() {
           offset={12}
           className="justify-center items-center p-4 gap-4"
         >
-          <div className="w-65dvw aspect-square max-w-65dvh">
-            <img className="image-thumb" src={rainyDay} />
+          <div className="justify-center items-center flex-grow gap-4">
+            <div className="w-65dvw aspect-square max-w-65dvh">
+              <img className="image-thumb" src={rainyDay} />
+            </div>
+            <div className="section-header">
+              See you Saturday at the market!
+            </div>
           </div>
-          <div className="section-header">See you Saturday at the market!</div>
+          <div className="text-xs">
+            <div className="justify-self-end flex-row justify-center items-center gap-1">
+              <div>&copy; {new Date().getFullYear()}</div>
+              <div>made with</div>
+              <div className="i-uil-heart" />
+              <div>by Cody Zuschlag</div>
+            </div>
+            <a
+              href="https://github.com/codyzu/newport-farmers-market"
+              className="justify-self-end flex flex-row justify-center items-center gap-1"
+            >
+              <div className="i-uil-github" />
+              <div className="underline">Open Source Software</div>
+            </a>
+          </div>
         </ParallaxLayer>
       </Parallax>
       <div className="absolute bottom-0 w-full items-end pointer-events-none">
