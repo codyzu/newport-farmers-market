@@ -1,9 +1,19 @@
 // eslint-disable-line unicorn/filename-case
+import {lazy} from 'react';
 import {createRootRoute, Outlet} from '@tanstack/react-router';
-import {TanStackRouterDevtools} from '@tanstack/router-devtools';
 import '@unocss/reset/tailwind.css';
 import 'uno.css';
 import '../index.css';
+
+const TanStackRouterDevtools =
+  import.meta.env.MODE === 'production'
+    ? () => null // Render nothing in production
+    : lazy(async () =>
+        // Lazy load in development
+        import('@tanstack/router-devtools').then((module) => ({
+          default: module.TanStackRouterDevtools,
+        })),
+      );
 
 export const Route = createRootRoute({
   component: () => (
