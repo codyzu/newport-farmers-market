@@ -89,6 +89,14 @@ export default function Vendors() {
           </div>
         ))}
       </div>
+      <div className="items-center">
+        <a
+          className="underline"
+          href="https://docs.google.com/forms/d/e/1FAIpQLScW2b5tIJq5WzAjHLjk9cTlqT93gJx-y7-sl89hDb4YbHQaFw/viewform?usp=sf_link"
+        >
+          Become a Vendor
+        </a>
+      </div>
     </div>
   );
 }
