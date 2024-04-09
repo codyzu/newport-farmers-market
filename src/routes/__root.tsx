@@ -1,5 +1,5 @@
 // eslint-disable-line unicorn/filename-case
-import {lazy} from 'react';
+import {lazy, Suspense} from 'react';
 import {createRootRoute, Outlet} from '@tanstack/react-router';
 import '@unocss/reset/tailwind.css';
 import 'uno.css';
@@ -28,7 +28,9 @@ export const Route = createRootRoute({
       </div>
       <hr /> */}
       <Outlet />
-      <TanStackRouterDevtools />
+      <Suspense>
+        <TanStackRouterDevtools />
+      </Suspense>
     </>
   ),
 });
