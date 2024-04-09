@@ -8,7 +8,7 @@ export default function Vendors() {
   useEffect(() => {
     async function fetchVendorData() {
       const result = await fetch(
-        'https://docs.google.com/spreadsheets/d/16bUypAq6vakaXLdMifvuMrVohRn9WOAkMxpgCEQVHkQ/gviz/tq?tqx=out:csv&sheet=Sheet1',
+        'https://docs.google.com/spreadsheets/d/16bUypAq6vakaXLdMifvuMrVohRn9WOAkMxpgCEQVHkQ/gviz/tq?tqx=out:csv&sheet=vendors',
         {
           headers: new Headers({'Content-Type': 'text/csv'}),
         },
@@ -22,7 +22,7 @@ export default function Vendors() {
 
       const nextVendors = vendorCsvData
         .split('\n')
-        .slice(1)
+        .slice(2)
         .map((vendorCsvLine, vendorIndex) => {
           const vendorCsvTokens = vendorCsvLine.split(',');
           const vendor: Vendor = {
@@ -42,7 +42,7 @@ export default function Vendors() {
     return () => {
       cancel = true;
     };
-  });
+  }, []);
 
   if (vendors === undefined) {
     return (
