@@ -45,7 +45,7 @@ function App() {
           </div>
         </ParallaxLayer>
         <ParallaxLayer offset={2.5} factor={2} className="">
-          <div className="w-full h-full bg-[url(/bridge-vertical.jpg)] bg-cover bg-center" />
+          <div className="w-full h-full bg-[url(/bridge-vertical.webp)] bg-cover bg-center" />
           <div className="w-full h-full bg-white bg-opacity-70 top-0 left-0 absolute" />
         </ParallaxLayer>
         <ParallaxLayer
