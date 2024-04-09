@@ -53,7 +53,7 @@ export default function Vendors() {
   }
 
   return (
-    <div className="gap-4 w-full max-w-screen-md p4 mx-auto">
+    <div className="gap-6 w-full max-w-screen-md p4 mx-auto">
       <Link className="button self-start" to="/">
         <div className="flex-row items-center">
           <div className="i-uil-angle-left h-2rem w-2rem ml--0.75rem" />
@@ -89,12 +89,20 @@ export default function Vendors() {
           </div>
         ))}
       </div>
-      <div className="items-center">
+      <div className="items-center gap-2 justify-center flex-wrap flex-row text-lg">
         <a
-          className="underline"
+          className="flex flex-row items-center"
           href="https://docs.google.com/forms/d/e/1FAIpQLScW2b5tIJq5WzAjHLjk9cTlqT93gJx-y7-sl89hDb4YbHQaFw/viewform?usp=sf_link"
         >
-          Become a Vendor
+          <div className="i-uil-file-question-alt h-2rem w-2rem" />
+          <div className="underline">Become a Vendor</div>
+        </a>
+        <a
+          className="flex flex-row"
+          href="https://drive.google.com/drive/folders/1foZn0lQcxg2cO0QywMBbYyIXPIzxjzak?usp=sharing"
+        >
+          <div className="i-uil-google-drive h-2rem w-2rem" />
+          <div className="underline">Vendor Resources</div>
         </a>
       </div>
     </div>
