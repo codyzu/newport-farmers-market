@@ -1,4 +1,5 @@
 import {Parallax, ParallaxLayer} from '@react-spring/parallax';
+import {Link} from '@tanstack/react-router';
 import flowers from './assets/flowers.png';
 import strawberries from './assets/strawberries.png';
 import vegetables1 from './assets/vegetables-1.png';
@@ -13,10 +14,12 @@ import rainyDay from './assets/rainy-day.jpg';
 import Hours from './Hours';
 import seedling from './assets/seedling.svg';
 import tomato from './assets/tomato.svg';
+// Import Vendors from './Vendors';
 
 function App() {
   return (
     <div className="h-100dvh w-100dvw relative overflow-hidden">
+      {/* <Vendors /> */}
       <Parallax pages={13}>
         <ParallaxLayer offset={0} speed={0} className="items-center">
           <div className="w-full max-w-screen-lg px-4 pt-4">
@@ -67,19 +70,19 @@ function App() {
           <div className="grid w-full max-w-screen-lg grid-cols-2 p-4 gap-8">
             <img className="image-thumb" src={strawberries} />
           </div>
-          <div className="text-3xl font-bold text-center h-2.25rem" />
+          {/* <div className="text-3xl font-bold text-center h-2.25rem" /> */}
         </ParallaxLayer>
         <ParallaxLayer offset={5} className="justify-center items-center gap-4">
           <div className="grid w-full max-w-screen-lg grid-cols-2 p-4 gap-8">
             <img className="image-thumb col-start-2" src={vegetables1} />
           </div>
-          <div className="text-3xl font-bold text-center h-2.25rem" />
+          {/* <div className="text-3xl font-bold text-center h-2.25rem" /> */}
         </ParallaxLayer>
         <ParallaxLayer offset={7} className="justify-center items-center gap-4">
           <div className="grid w-full max-w-screen-lg grid-cols-2 p-4 gap-8">
             <img className="image-thumb col-start-2" src={flowers} />
           </div>
-          <div className="text-3xl font-bold text-center h-2.25rem" />
+          {/* <div className="text-3xl font-bold text-center h-2.25rem" /> */}
         </ParallaxLayer>
         <ParallaxLayer
           offset={7}
@@ -92,15 +95,19 @@ function App() {
               src={vegetables2}
             />
           </div>
-          <div className="text-3xl font-bold text-center h-2.25rem" />
+          {/* <div className="text-3xl font-bold text-center h-2.25rem" /> */}
         </ParallaxLayer>
         <ParallaxLayer
           sticky={{start: 4, end: 8}}
           className="justify-center items-center gap-4 p-2 z-1"
         >
-          <div className="w-60dvw aspect-square max-w-60dvh" />
-          <div className="text-3xl font-bold text-center text-section">
-            Local farmers, craftsmen, artisans, & vendors
+          <div className="text-section gap-4">
+            <div className="text-3xl font-bold text-center">
+              Local farmers, craftsmen, artisans, & vendors
+            </div>
+            <Link className="button self-center" to="/vendors">
+              View All Vendors
+            </Link>
           </div>
         </ParallaxLayer>
         <ParallaxLayer
