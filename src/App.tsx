@@ -1,5 +1,6 @@
 import {Parallax, ParallaxLayer} from '@react-spring/parallax';
 import {Link} from '@tanstack/react-router';
+import {useTranslation} from 'react-i18next';
 import flowers from './assets/flowers.webp';
 import strawberries from './assets/strawberries.webp';
 import vegetables1 from './assets/vegetables-1.webp';
@@ -17,26 +18,35 @@ import tomato from './assets/tomato.svg';
 // Import Vendors from './Vendors';
 
 function App() {
+  const {t, i18n} = useTranslation();
   return (
     <div className="h-100dvh w-100dvw relative overflow-hidden">
-      {/* <Vendors /> */}
       <Parallax pages={13}>
-        <ParallaxLayer offset={0} speed={0} className="items-center">
-          <div className="w-full max-w-screen-lg px-4 pt-4">
-            <News />
-          </div>
-        </ParallaxLayer>
         <ParallaxLayer
           offset={0}
           speed={0}
-          className="justify-center items-center gap-4 p4"
+          className="justify-center items-center gap-4 px-4 pb-4"
         >
-          <img
-            src={rooster}
-            className="h-40dvh w-40dvh object-contain fill-current animate-fade-in animate-duration-4000"
-          />
-          <div className="p2 text-4xl font-bold border-y-4 border-green-8 text-center">
-            <h1>Newport Farmers Market</h1>
+          <div className="max-w-screen-md h-full w-full gap-1">
+            <button
+              type="button"
+              className="button font-normal text-xs p-1 self-end rounded-t-none"
+              onClick={() => {
+                void i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en');
+              }}
+            >
+              {i18n.language === 'en' ? 'Español' : 'English'}
+            </button>
+            <News />
+            <div className="flex-grow justify-center items-center gap-4">
+              <img
+                src={rooster}
+                className="h-40dvh w-40dvh object-contain fill-current animate-fade-in animate-duration-4000"
+              />
+              <div className="p2 text-4xl font-bold border-y-4 border-green-8 text-center">
+                <h1>{t('title')}</h1>
+              </div>
+            </div>
           </div>
         </ParallaxLayer>
         <ParallaxLayer offset={1} className="justify-center items-center">
