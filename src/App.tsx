@@ -32,10 +32,12 @@ function App() {
               type="button"
               className="button font-normal text-xs p-1 self-end rounded-t-none"
               onClick={() => {
-                void i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en');
+                void i18n.changeLanguage(
+                  i18n.resolvedLanguage === 'en' ? 'es' : 'en',
+                );
               }}
             >
-              {i18n.language === 'en' ? 'Español' : 'English'}
+              {i18n.resolvedLanguage === 'en' ? 'Español' : 'English'}
             </button>
             <News />
             <div className="flex-grow justify-center items-center gap-4">
