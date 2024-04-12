@@ -1,5 +1,5 @@
 // eslint-disable-line unicorn/filename-case
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import {RouterProvider, createRouter} from '@tanstack/react-router';
 import {routeTree} from './routeTree.gen';
@@ -17,6 +17,8 @@ declare module '@tanstack/react-router' {
 
 ReactDOM.createRoot(document.querySelector('#root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Suspense>
+      <RouterProvider router={router} />
+    </Suspense>
   </React.StrictMode>,
 );
