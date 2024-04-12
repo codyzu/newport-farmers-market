@@ -20,6 +20,19 @@ void i18n
     detection: {
       order: ['localStorage', 'navigator'],
       caches: ['localStorage'], // Saves preferences
+      convertDetectedLanguage(language) {
+        // On first visit, this will pull the long language code: 'en-US'
+        // As mentioned before, we support only the language codes: 'en'
+        if (language.includes('-')) {
+          return language.split('-').at(0)!;
+        }
+
+        if (language.includes('_')) {
+          return language.split('_').at(0)!;
+        }
+
+        return language;
+      },
     },
   });
 
