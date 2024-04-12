@@ -10,6 +10,9 @@ void i18n
   .use(initReactI18next) // Initializes i18next with react-i18next
   .init({
     debug: true,
+    // We only support 'en' and 'es', avoid attempting to load 'en-US' on the backend.
+    // This resolved errors due to being an SPA and cached missing assets.
+    load: 'languageOnly',
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false, // This ensures raw HTML in translations (if needed)
